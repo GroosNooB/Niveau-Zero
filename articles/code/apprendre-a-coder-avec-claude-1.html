@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment j'ai créé mon premier site avec Claude | Niveau Zéro</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="../../index.html" class="logo">Niveau Zéro</a></h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../../pages/code.html" class="active">Code</a></li>
+            <li><a href="../../pages/sport.html">Sport</a></li>
+            <li><a href="../../pages/lifestyle.html">Lifestyle</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="article-full">
+            <!-- Back button -->
+            <a href="../../pages/code.html" class="back-link">← Retour à Code</a>
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <span class="article-category code">Code</span>
+                <h1 class="article-title">Comment j'ai créé mon premier site avec Claude</h1>
+                <div class="article-meta">
+                    <span>📅 Publié le 8 janvier 2026</span>
+                    <span>⏱️ 8 min de lecture</span>
+                </div>
+            </header>
+
+            <!-- Article Content -->
+            <div class="article-content">
+                <p>Aujourd'hui, je veux partager avec vous mon expérience de création de mon premier site web : ce blog que vous lisez actuellement. En partant de zéro absolu en HTML et CSS, j'ai réussi à créer un blog professionnel en une seule session (de deux semaines) avec l'aide de Claude. Voici comment j'ai procédé et ce que j'ai appris.</p>
+
+                <h3>Le point de départ : une vision claire</h3>
+                
+                <p>J'avais une idée simple : créer un blog appelé "niveau zéro" avec trois sections principales (Code, Sport, Lifestyle). Je ne savais pas coder, mais je savais ce que je voulais. C'est le premier conseil que je peux donner : avoir une vision claire de ce qu'on veut créer.</p>
+
+                <p>Au lieu de demander "apprends-moi le HTML", j'ai commencé par dire : "Je veux créer un blog avec un titre et une navigation avec 3 parties". Cette approche orientée projet m'a permis d'apprendre en faisant, pas en théorie.</p>
+
+                <h3>La méthode qui a fonctionné</h3>
+
+                <h4>1. Commencer simple et construire progressivement</h4>
+
+                <p>On a commencé par la page la plus basique : un header et une navigation. Pas de fioritures, juste la structure. Puis, étape par étape, on a ajouté :</p>
+
+                <ul class="objectives">
+                    <li>La page Sport avec des articles</li>
+                    <li>Une mise en page professionnelle pour les articles</li>
+                    <li>Une landing page engageante avec des cartes de catégories</li>
+                    <li>Une roadmap interactive</li>
+                    <li>Une structure de dossiers professionnelle</li>
+                </ul>
+
+                <p>Chaque fois que j'ajoute quelque chose, je test et j'essai de commeprendre comment ça marche avant de passer au suivant. Pas de précipitation.</p>
+
+                <h4>2. Poser les bonnes questions au bon moment</h4>
+
+                <p class="highlight">Ne pas hésiter à demander "pourquoi" et "comment" dès qu'on ne comprend pas quelque chose.</p>
+
+                <p>Quand j'ai vu `<meta name="viewport">` dans le code, je n'ai pas laissé passer. J'ai demandé ce que c'était. Cette curiosité m'a permis de comprendre les concepts au fur et à mesure plutôt que de copier-coller bêtement du code.</p>
+
+                <p>Autres questions que j'ai posées :</p>
+                <ul class="objectives">
+                    <li>"C'est quoi `class=` et comment on l'utilise ?"</li>
+                    <li>"Comment on lie les pages entre elles ?"</li>
+                    <li>"Quelle est la structure professionnelle pour organiser plusieurs pages ?"</li>
+                </ul>
+
+                <h4>3. Choisir l'approche professionnelle dès le début</h4>
+
+                <p>Quand Claude m'a proposé 3 options pour organiser mon blog (simple, intermédiaire, professionnelle), j'ai choisi l'option 3 : la structure professionnelle avec des dossiers séparés pour les pages, le CSS, et les images.</p>
+
+                <p>Pourquoi ? Parce que si je veux être professionnel, autant apprendre les bonnes pratiques dès le début. Oui, c'était un peu plus complexe, mais ça m'a forcé à comprendre les chemins relatifs (`../`) et l'organisation de fichiers.</p>
+
+                <h3>Ce que j'ai appris concrètement</h3>
+
+                <h4>Concepts HTML/CSS maîtrisés :</h4>
+
+                <ul class="objectives">
+                    <li><strong>La structure HTML</strong> : header, nav, main, article, section</li>
+                    <li><strong>Les classes CSS</strong> : comment les créer et les utiliser pour styler des éléments</li>
+                    <li><strong>La séparation HTML/CSS</strong> : pourquoi c'est mieux d'avoir un fichier CSS séparé</li>
+                    <li><strong>Les liens</strong> : comment naviguer entre les pages avec des chemins relatifs</li>
+                    <li><strong>Le responsive design</strong> : le viewport meta tag et pourquoi c'est important</li>
+                    <li><strong>L'organisation de fichiers</strong> : structure professionnelle avec dossiers pages/, css/, articles/</li>
+                </ul>
+
+                <h4>Compétences pratiques développées :</h4>
+
+                <ul class="objectives">
+                    <li>Créer une navigation fonctionnelle</li>
+                    <li>Structurer des articles de blog lisibles</li>
+                    <li>Organiser un projet web professionnel</li>
+                    <li>Comprendre comment lier CSS et HTML</li>
+                    <li>Utiliser des classes pour réutiliser des styles</li>
+                </ul>
+
+                <h3>Les erreurs que j'ai faites (et corrigées)</h3>
+
+                <h4>Erreur #1 : Mauvais chemin CSS</h4>
+
+                <p>Mon premier article ne chargeait pas le CSS. Pourquoi ? Parce que j'avais mis `href="../css/style.css"` alors que mon article était dans `articles/sport/` et nécessitait `href="../../css/style.css"` (deux niveaux au-dessus).</p>
+
+                <p><strong>Leçon :</strong> Bien comprendre où sont ses fichiers et comment les chemins relatifs fonctionnent.</p>
+
+                <h4>Erreur #2 : Liens de navigation incorrects</h4>
+
+                <p>Dans mes articles, les liens de navigation pointaient vers `sport.html` au lieu de `../pages/sport.html`. Résultat : liens cassés.</p>
+
+                <p><strong>Leçon :</strong> Toujours tester ses liens après avoir créé une nouvelle page.</p>
+
+                <h3>Comment tirer le maximum de Claude pour apprendre le code</h3>
+
+                <div class="key-takeaways">
+                    <h4>Mes conseils basés sur cette expérience :</h4>
+                    <ul>
+                        <li><strong>Avoir un projet concret</strong> - Apprendre en construisant quelque chose de réel, pas en faisant des exercices abstraits</li>
+                        <li><strong>Commencer simple</strong> - Ne pas vouloir tout faire d'un coup. Construire progressivement</li>
+                        <li><strong>Demander des explications</strong> - Chaque fois qu'on ne comprend pas, demander "pourquoi" et "comment"</li>
+                        <li><strong>Choisir l'approche pro</strong> - Apprendre les bonnes pratiques dès le début, même si c'est plus dur</li>
+                        <li><strong>Tester immédiatement</strong> - Ouvrir le fichier HTML dans le navigateur après chaque modification</li>
+                        <li><strong>Corriger ses erreurs</strong> - Les bugs sont des opportunités d'apprentissage, pas des échecs</li>
+                        <li><strong>Documenter son parcours</strong> - Écrire ce qu'on apprend (comme cet article !)</li>
+                        <li><strong>Être curieux sur les détails</strong> - Ne pas laisser passer du code qu'on ne comprend pas</li>
+                    </ul>
+                </div>
+
+                <h3>L'approche conversationnelle : un game changer</h3>
+
+                <p>Ce qui a fait toute la différence, c'est l'approche conversationnelle. Au lieu de regarder des tutoriels vidéo de 3 heures où je ne peux pas poser de questions, j'ai pu :</p>
+
+                <ul class="objectives">
+                    <li>Obtenir des réponses instantanées à mes questions spécifiques</li>
+                    <li>Demander des explications sur les parties que je ne comprenais pas</li>
+                    <li>Adapter le code à mes besoins exacts</li>
+                    <li>Corriger mes erreurs en temps réel</li>
+                    <li>Progresser à mon rythme sans frustration</li>
+                </ul>
+
+                <h3>Le résultat : un vrai projet dont je suis fier</h3>
+
+                <p>En quelques jours, je suis passé de zéro connaissance en code à un blog fonctionnel avec :</p>
+
+                <ul class="objectives">
+                    <li>Une landing page professionnelle</li>
+                    <li>Trois sections de contenu</li>
+                    <li>Des articles bien structurés et lisibles</li>
+                    <li>Une roadmap interactive</li>
+                    <li>Une organisation de fichiers professionnelle</li>
+                    <li>Un design moderne et responsive</li>
+                </ul>
+
+                <p>Mais surtout, je comprends maintenant comment tout fonctionne. Je ne me suis pas contenté de copier-coller, j'ai appris les concepts fondamentaux.</p>
+
+                <h3>La suite de mon parcours</h3>
+
+                <p>Maintenant que j'ai les bases, mes prochaines étapes sont :</p>
+
+                <ul class="objectives">
+                    <li>Mettre mon blog sur GitHub (versioning et backup)</li>
+                    <li>Apprendre le JavaScript pour ajouter de l'interactivité</li>
+                    <li>Améliorer le design progressivement</li>
+                    <li>Ajouter plus de fonctionnalités (formulaire de contact, recherche, etc.)</li>
+                    <li>Continuer à documenter mon apprentissage dans des articles</li>
+                </ul>
+
+                <p class="highlight">Le message que je veux faire passer : vous n'avez pas besoin de "savoir coder" pour commencer à créer. Commencez par un projet qui vous passionne, utilisez les outils d'IA comme Claude, posez des questions, et apprenez en faisant.</p>
+
+                <p>Le niveau zéro n'est pas un handicap, c'est un point de départ excitant. Chaque concept appris, chaque erreur corrigée, chaque page créée est une victoire. Et croyez-moi, ça va beaucoup plus vite qu'on ne le pense.</p>
+            </div>
+
+            <!-- Article Footer -->
+            <footer class="article-footer">
+                <a href="../../pages/code.html" class="back-link">← Retour à Code</a>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
