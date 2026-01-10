@@ -77,9 +77,8 @@ Mon blog inclut une roadmap détaillant mes objectifs pour 2026 :
 
 ## 👤 Auteur
 
-**[Ton nom]**
-- Blog : [lien]
-- LinkedIn : [lien] (optionnel)
+Francois Leroy
+
 
 ## 📄 Licence
 
