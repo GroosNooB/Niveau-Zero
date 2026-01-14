@@ -3,31 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niveau Zéro - Accueil</title>
+    <title>niveau zéro - Accueil</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html" class="logo">Niveau Zéro</a></h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="pages/code.html">Code</a></li>
-            <li><a href="pages/sport.html">Sport</a></li>
-            <li><a href="pages/lifestyle.html">Lifestyle</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="images\logo-1.jpg" alt="logo-image">
+                <span class="logo-text">Niveau Zéro</span>
+            </a>
+        </div>
+        
+        <div class="nav-center">
+            <a href="pages/code.html">Code</a>
+            <a href="pages/sport.html">Sport</a>
+            <a href="pages/lifestyle.html">Lifestyle</a>
+            <a href="#about">À propos</a>
+        </div>
+        
+        <div class="nav-right">
+            <a href="#roadmap" class="nav-roadmap">Roadmap</a>
+        </div>
     </nav>
     
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <h2>Partir de zéro, grandir ensemble</h2>
-            <p class="hero-subtitle">Un blog sur l'apprentissage du code, la découverte du sport et l'exploration du lifestyle. Rejoignez-moi dans ce voyage depuis le niveau zéro.</p>
+            <h2>De zéro à on verra bien</h2>
+            <p class="hero-subtitle">💻Partir de zéro en programation pour en faire son métier 🏃‍♀️‍➡️ Courir un semi martahon sans jamais avoir couru 🏠S'installer à Paris sans travail ni logement<br>Des projets, des échecs, des petites victoires, que je partage avec vous dans ce blog</p>
         </section>
 
-        <!-- Roadmap Section -->
-        <section class="roadmap-section">
+        <!-- Category Cards -->
+        <section class="categories">
+            <h3 class="section-title">Explorez les catégories</h3>
+            <div class="category-grid">
+                <a href="pages/code.html" class="category-card">
+                    <div class="category-icon">💻</div>
+                    <h4>Code</h4>
+                    <p>Découvrez mon apprentissage du développement web, du HTML au CSS et au-delà.</p>
+                </a>
+
+                <a href="pages/sport.html" class="category-card">
+                    <div class="category-icon">🏄</div>
+                    <h4>Sport</h4>
+                    <p>Suivez mes aventures sportives, du surf aux défis fitness et à la course à pied.</p>
+                </a>
+
+                <a href="pages/lifestyle.html" class="category-card">
+                    <div class="category-icon">✨</div>
+                    <h4>Lifestyle</h4>
+                    <p>Explorez mes réflexions sur la vie, les voyages et le développement personnel.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Latest Articles -->
+        <section class="latest-articles">
+            <h3 class="section-title">Derniers articles</h3>
+            
+            <article class="article">
+                <span class="article-category sport">Sport</span>
+                <h2>Ce que le surf m'a appris sur la vie - Partie 2</h2>
+                <div class="article-meta">Publié le 29 décembre 2024</div>
+                <p>La suite de mes aventures surf au Sri Lanka. Entre progression technique et leçons de vie, voici ce que ces trois jours m'ont appris...</p>
+                <a href="articles/surf-lecons-vie-partie2.html" class="read-more">Lire la suite →</a>
+            </article>
+
+            <article class="article">
+                <span class="article-category sport">Sport</span>
+                <h2>Ce que le surf m'a appris sur la vie - Partie 1</h2>
+                <div class="article-meta">Publié le 27 décembre 2024</div>
+                <p>Au Sri Lanka, sous le soleil d'Ahgama, j'ai décidé de me lancer sérieusement dans le surf. Entre échecs et petites victoires, voici ce que cette première session m'a appris...</p>
+                <a href="articles/surf-lecons-vie-partie1.html" class="read-more">Lire la suite →</a>
+            </article>
+
+            <article class="article">
+                <span class="article-category code">Code</span>
+                <h2>Comment j'ai créé mon premier site avec Claude</h2>
+                <div class="article-meta">Publié le 7 janvier 2026</div>
+                <p>Mon parcours d'apprentissage du code, de zéro à un blog professionnel. Les méthodes qui ont marché, les erreurs faites, et comment tirer le maximum de l'IA pour apprendre...</p>
+                <a href="articles/apprendre-coder-avec-claude.html" class="read-more">Lire la suite →</a>
+            </article>
+
+            <article class="article">
+                <span class="article-category lifestyle">Lifestyle</span>
+                <h2>Objectifs 2026 : Ma Roadmap personnelle</h2>
+                <div class="article-meta">Publié le 8 janvier 2026</div>
+                <p>Pourquoi définir des objectifs précis change tout. Mon plan de bataille pour 2026, découpé en trimestres avec trois piliers : Code, Sport, Lifestyle...</p>
+                <a href="articles/roadmap-2026.html" class="read-more">Lire la suite →</a>
+            </article>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h3>À propos de niveau zéro</h3>
+            <p>Je suis un débutant passionné qui documente son parcours d'apprentissage. Que ce soit en code, en sport ou dans la vie, je crois que tout le monde commence au niveau zéro. Ce blog est mon espace pour partager mes découvertes, mes échecs et mes victoires.</p>
+        </section>
+
+        <!-- Roadmap Section (Footer) -->
+        <section class="roadmap-section" id="roadmap">
             <h3 class="section-title">🚀 Ma Roadmap 2026</h3>
             <p class="roadmap-subtitle">Mes objectifs pour cette année de transformation</p>
             
@@ -82,9 +157,8 @@
                             <div class="category">
                                 <div class="category-title">🌟 Lifestyle</div>
                                 <ul class="objectives">
-                                    <li>Avoir lu 6 livres et résumé</li>
+                                    <li>Remplir le PEP</li>
                                     <li>Avoir rencontré 5 personnes dans le développement/entrepreneuriat</li>
-                                    <li>Construire une stratégie d'investissement</li>
                                 </ul>
                             </div>
                         </div>
@@ -109,8 +183,7 @@
                             <div class="category">
                                 <div class="category-title">🌟 Lifestyle</div>
                                 <ul class="objectives">
-                                    <li>Arreter la cigarette</li>
-                                    <li>Remplir le PEP</li>
+                                    <li>Objectifs à définir</li>
                                 </ul>
                             </div>
                         </div>
@@ -144,65 +217,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- Category Cards -->
-        <section class="categories">
-            <h3 class="section-title">Explorez les catégories</h3>
-            <div class="category-grid">
-                <a href="pages/code.html" class="category-card">
-                    <div class="category-icon">💻</div>
-                    <h4>Code</h4>
-                    <p>Découvrez mon apprentissage du développement web, du HTML au CSS et au-delà.</p>
-                </a>
-
-                <a href="pages/sport.html" class="category-card">
-                    <div class="category-icon">🏄</div>
-                    <h4>Sport</h4>
-                    <p>Suivez mes aventures sportives, du surf aux défis fitness et à la course à pied.</p>
-                </a>
-
-                <a href="pages/lifestyle.html" class="category-card">
-                    <div class="category-icon">✨</div>
-                    <h4>Lifestyle</h4>
-                    <p>Explorez mes réflexions sur la vie, les voyages et le développement personnel.</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Latest Articles -->
-        <section class="latest-articles">
-            <h3 class="section-title">Derniers articles</h3>
-            
-            <article class="article">
-                <span class="article-category sport">Sport</span>
-                <h2>Ce que le surf m'a appris sur la vie - Partie 1</h2>
-                <div class="article-meta">Publié le 27 décembre 2024</div>
-                <p>Au Sri Lanka, sous le soleil d'Ahgama, j'ai décidé de me lancer sérieusement dans le surf. Entre échecs et petites victoires, voici ce que cette première session m'a appris...</p>
-                <a href="articles/surf-lecons-vie-partie1.html" class="read-more">Lire la suite →</a>
-            </article>
-
-            <article class="article">
-                <span class="article-category code">Code</span>
-                <h2>Comment j'ai créé mon premier site web</h2>
-                <div class="article-meta">Publié le 27 décembre 2024</div>
-                <p>Aujourd'hui marque le début de mon aventure dans le développement web. J'ai décidé de créer ce blog pour documenter mon apprentissage du HTML et du CSS...</p>
-                <a href="#" class="read-more">Lire la suite →</a>
-            </article>
-
-            <article class="article">
-                <span class="article-category lifestyle">Lifestyle</span>
-                <h2>Pourquoi partir de zéro est le meilleur endroit pour commencer</h2>
-                <div class="article-meta">Publié le 25 décembre 2024</div>
-                <p>On a tous peur de commencer quelque chose en étant débutant. Mais et si le niveau zéro était en réalité le moment le plus excitant de tout parcours...</p>
-                <a href="#" class="read-more">Lire la suite →</a>
-            </article>
-        </section>
-
-        <!-- About Section -->
-        <section class="about">
-            <h3>À propos de niveau zéro</h3>
-            <p>Je suis un débutant passionné qui documente son parcours d'apprentissage. Que ce soit en code, en sport ou dans la vie, je crois que tout le monde commence au niveau zéro. Ce blog est mon espace pour partager mes découvertes, mes échecs et mes victoires.</p>
-        </section>
     </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Niveau Zéro - Partir de zéro, grandir ensemble</p>
+    </footer>
 </body>
 </html>
