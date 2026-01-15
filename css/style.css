@@ -569,7 +569,7 @@ main {
 
 .highlight {
     background: linear-gradient(120deg, #fff3e0 0%, #fff3e0 100%);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100% 50%;
     background-position: 0 85%;
     padding: 0.3rem 0;
