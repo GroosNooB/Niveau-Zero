@@ -1,0 +1,694 @@
+/* ========================================
+   NIVEAU ZÉRO - DIRECTION ARTISTIQUE
+   Palette: Tons chauds, accueillants et professionnels
+   ======================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: #2d2d2d;
+    background-color: #faf8f5;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* ========================================
+   NAVIGATION BAR
+   ======================================== */
+.navbar {
+    background-color: #fff;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Left: Logo */
+.nav-left {
+    flex: 1;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;  /* Logo rond */
+}
+
+.logo-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #d4725c;
+    letter-spacing: 1px;
+}
+
+/* Center: Main Links */
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.nav-center a {
+    color: #5a4a3a;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-center a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d4725c;
+    transition: width 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: #d4725c;
+}
+
+.nav-center a:hover::after,
+.nav-center a.active::after {
+    width: 100%;
+}
+
+.nav-center a.active {
+    color: #d4725c;
+}
+
+/* Right: Roadmap Link */
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-roadmap {
+    background: linear-gradient(135deg, #d4725c 0%, #c9563d 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(212, 114, 92, 0.3);
+}
+
+.nav-roadmap:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 114, 92, 0.4);
+}
+
+/* ========================================
+   HEADER (removed, now using navbar)
+   ======================================== */
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f9e6d9 0%, #f5d9c4 100%);
+    border-radius: 12px;
+    margin-bottom: 4rem;
+    box-shadow: 0 4px 15px rgba(212, 114, 92, 0.1);
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #d4725c;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #5a4a3a;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ========================================
+   SECTION TITLES
+   ======================================== */
+.section-title {
+    font-size: 2.2rem;
+    color: #d4725c;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ========================================
+   CATEGORY CARDS
+   ======================================== */
+.categories {
+    margin-bottom: 5rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.category-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #2d2d2d;
+    border: 2px solid #f5ede3;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(212, 114, 92, 0.15);
+    border-color: #d4725c;
+}
+
+.category-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.category-card h4 {
+    font-size: 1.6rem;
+    color: #d4725c;
+    margin-bottom: 0.8rem;
+}
+
+.category-card p {
+    color: #5a4a3a;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ========================================
+   LATEST ARTICLES SECTION
+   ======================================== */
+.latest-articles {
+    margin-bottom: 4rem;
+}
+
+/* ========================================
+   ARTICLES
+   ======================================== */
+.article {
+    background-color: #fff;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #d4725c;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.article:hover {
+    box-shadow: 0 5px 20px rgba(212, 114, 92, 0.15);
+    transform: translateX(5px);
+}
+
+.article-category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.article-category.code {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.article-category.sport {
+    background-color: #fff3e0;
+    color: #d4725c;
+}
+
+.article-category.lifestyle {
+    background-color: #f3e5f5;
+    color: #8e44ad;
+}
+
+.article h2 {
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    font-size: 1.7rem;
+    line-height: 1.4;
+}
+
+.article-meta {
+    color: #8a7a6a;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.article p {
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: #d4725c;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: #c9563d;
+    transform: translateX(5px);
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+.about {
+    background: linear-gradient(135deg, #f9e6d9 0%, #f5d9c4 100%);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 4rem;
+    box-shadow: 0 2px 10px rgba(212, 114, 92, 0.1);
+}
+
+.about h3 {
+    color: #d4725c;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.about p {
+    color: #5a4a3a;
+    line-height: 1.9;
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   ROADMAP SECTION (FOOTER)
+   ======================================== */
+.roadmap-section {
+    margin: 5rem 0 3rem;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid #d4725c;
+}
+
+.roadmap-subtitle {
+    text-align: center;
+    color: #5a4a3a;
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.timeline-wrapper {
+    position: relative;
+    overflow-x: auto;
+    padding: 40px 0;
+}
+
+.timeline {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    min-width: 1200px;
+    padding: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d4725c, #c9563d);
+    border-radius: 2px;
+}
+
+.quarter {
+    flex: 1;
+    position: relative;
+}
+
+.quarter-marker {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d4725c, #c9563d);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    box-shadow: 0 3px 15px rgba(212, 114, 92, 0.3);
+    margin: 0 auto 25px;
+    z-index: 10;
+}
+
+.quarter-content {
+    background: #faf8f5;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #f5ede3;
+    transition: all 0.3s ease;
+    min-height: 280px;
+}
+
+.quarter-content:hover {
+    border-color: #d4725c;
+    box-shadow: 0 5px 15px rgba(212, 114, 92, 0.15);
+}
+
+.quarter-content .category {
+    margin-bottom: 15px;
+}
+
+.quarter-content .category:last-child {
+    margin-bottom: 0;
+}
+
+.quarter-content .category-title {
+    font-size: 0.95em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+}
+
+.objectives {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.objectives li {
+    padding: 4px 0;
+    color: #4a4a4a;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.objectives li::before {
+    content: '•';
+    margin-right: 8px;
+    color: #d4725c;
+    font-weight: bold;
+}
+
+/* Scrollbar for roadmap */
+.timeline-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-track {
+    background: #f5ede3;
+    border-radius: 10px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb {
+    background: #d4725c;
+    border-radius: 10px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #c9563d;
+}
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+.site-footer {
+    background-color: #e8ddd1;
+    text-align: center;
+    padding: 2rem;
+    color: #5a4a3a;
+    font-family: 'Arial', sans-serif;
+    margin-top: 3rem;
+}
+
+/* ========================================
+   FULL ARTICLE PAGE STYLES
+   ======================================== */
+.article-full {
+    max-width: 800px;
+    margin: 3rem auto;
+    background: #fff;
+    padding: 3.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid #d4725c;
+}
+
+.back-link {
+    display: inline-block;
+    color: #d4725c;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: #c9563d;
+    transform: translateX(-5px);
+}
+
+.article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f5ede3;
+}
+
+.article-title {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin: 1rem 0;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.article-content {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #2d2d2d;
+}
+
+.article-content p {
+    margin-bottom: 1.8rem;
+}
+
+.article-content h3 {
+    font-size: 1.8rem;
+    color: #d4725c;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+
+.article-content h4 {
+    font-size: 1.4rem;
+    color: #5a4a3a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    background: linear-gradient(120deg, #fff3e0 0%, #fff3e0 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: 0 85%;
+    padding: 0.3rem 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.key-takeaways {
+    background: linear-gradient(135deg, #f9e6d9 0%, #f5d9c4 100%);
+    padding: 2rem;
+    border-left: 4px solid #d4725c;
+    margin: 2.5rem 0;
+    border-radius: 8px;
+}
+
+.key-takeaways h4 {
+    color: #d4725c;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-top: 0 !important;
+}
+
+.key-takeaways ul {
+    margin-left: 1.5rem;
+}
+
+.key-takeaways li {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #2d2d2d;
+}
+
+.article-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #f5ede3;
+}
+
+/* Roadmap Quarter Boxes in Articles */
+.roadmap-quarter {
+    background: linear-gradient(135deg, #f9e6d9 0%, #f5d9c4 100%);
+    border-left: 4px solid #d4725c;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.roadmap-category {
+    margin-bottom: 1rem;
+}
+
+.roadmap-category:last-child {
+    margin-bottom: 0;
+}
+
+.roadmap-category strong {
+    display: block;
+    color: #d4725c;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .nav-left,
+    .nav-center,
+    .nav-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .nav-center {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-center a {
+        padding: 0.8rem 0;
+    }
+
+    .nav-right {
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-full {
+        padding: 2rem;
+    }
+
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-content {
+        font-size: 1.05rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+}
