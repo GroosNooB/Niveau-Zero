@@ -567,9 +567,36 @@ main {
     margin-bottom: 1rem;
 }
 
+.article-content code {
+    background-color: #f5ede3;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    color: #d4725c;
+}
+
+.code-block {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border-left: 4px solid #d4725c;
+}
+
+.code-block code {
+    background: none;
+    color: #f8f8f2;
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 .highlight {
     background: linear-gradient(120deg, #fff3e0 0%, #fff3e0 100%);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: 100% 50%;
     background-position: 0 85%;
     padding: 0.3rem 0;
@@ -690,3 +717,4 @@ main {
     main {
         padding: 2rem 1rem;
     }
+}
