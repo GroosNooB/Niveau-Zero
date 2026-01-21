@@ -10,12 +10,19 @@
     <nav class="navbar">
         <div class="nav-left">
             <a href="index.html" class="nav-logo">
-                <img src="images\logo-1.png" alt="Niveau Zéro Logo" class="logo-icon">
+                <img src="images/logo.png" alt="Niveau Zéro Logo" class="logo-icon">
                 <span class="logo-text">Niveau Zéro</span>
             </a>
         </div>
         
-        <div class="nav-center">
+        <!-- Bouton Hamburger (visible seulement sur mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <div class="nav-center" id="navMenu">
             <a href="pages/code.html">Code</a>
             <a href="pages/sport.html">Sport</a>
             <a href="pages/lifestyle.html">Lifestyle</a>
@@ -63,27 +70,19 @@
             <h3 class="section-title">Derniers articles</h3>
             
             <article class="article">
-            <span class="article-category sport">Sport</span>
-            <h2> Ce que le surf m'a appris sur la vie - Partie 3</h2>
-            <div class="article-meta"> Publié le 17 janvier 2025</div>
-            <p>Dernière étape de ce Surf Trip, nouveaux spot, nouvelles planches, nouveaux échecs, nouvelles victoires</p>
-            <a href="articles/sport/surf-vie-3.html" class="read-more">Lire la suite →</a>
-        </article>
-
-            <article class="article">
                 <span class="article-category sport">Sport</span>
                 <h2>Ce que le surf m'a appris sur la vie - Partie 2</h2>
-                <div class="article-meta">Publié le 29 décembre 2025</div>
+                <div class="article-meta">Publié le 29 décembre 2024</div>
                 <p>La suite de mes aventures surf au Sri Lanka. Entre progression technique et leçons de vie, voici ce que ces trois jours m'ont appris...</p>
-                <a href="articles\sport\surf-vie-2.html" class="read-more">Lire la suite →</a>
+                <a href="articles/surf-lecons-vie-partie2.html" class="read-more">Lire la suite →</a>
             </article>
 
             <article class="article">
                 <span class="article-category sport">Sport</span>
                 <h2>Ce que le surf m'a appris sur la vie - Partie 1</h2>
-                <div class="article-meta">Publié le 27 décembre 2025</div>
+                <div class="article-meta">Publié le 27 décembre 2024</div>
                 <p>Au Sri Lanka, sous le soleil d'Ahgama, j'ai décidé de me lancer sérieusement dans le surf. Entre échecs et petites victoires, voici ce que cette première session m'a appris...</p>
-                <a href="articles\sport\surf-vie-1.html" class="read-more">Lire la suite →</a>
+                <a href="articles/surf-lecons-vie-partie1.html" class="read-more">Lire la suite →</a>
             </article>
 
             <article class="article">
@@ -91,15 +90,15 @@
                 <h2>Comment j'ai créé mon premier site avec Claude</h2>
                 <div class="article-meta">Publié le 7 janvier 2026</div>
                 <p>Mon parcours d'apprentissage du code, de zéro à un blog professionnel. Les méthodes qui ont marché, les erreurs faites, et comment tirer le maximum de l'IA pour apprendre...</p>
-                <a href="articles\code\apprendre-a-coder-avec-claude-1.html" class="read-more">Lire la suite →</a>
+                <a href="articles/apprendre-coder-avec-claude.html" class="read-more">Lire la suite →</a>
             </article>
 
             <article class="article">
                 <span class="article-category lifestyle">Lifestyle</span>
                 <h2>Objectifs 2026 : Ma Roadmap personnelle</h2>
-                <div class="article-meta">Publié le 13 janvier 2026</div>
+                <div class="article-meta">Publié le 8 janvier 2026</div>
                 <p>Pourquoi définir des objectifs précis change tout. Mon plan de bataille pour 2026, découpé en trimestres avec trois piliers : Code, Sport, Lifestyle...</p>
-                <a href="articles\lifestyle\roadmap-2026.html" class="read-more">Lire la suite →</a>
+                <a href="articles/roadmap-2026.html" class="read-more">Lire la suite →</a>
             </article>
         </section>
 
@@ -118,7 +117,7 @@
                 <div class="timeline">
                     <!-- Q1 -->
                     <div class="quarter">
-                        <div class="quarter-marker">Tri1</div>
+                        <div class="quarter-marker">Q1</div>
                         <div class="quarter-content">
                             <div class="category">
                                 <div class="category-title">💻 Code</div>
@@ -145,7 +144,7 @@
 
                     <!-- Q2 -->
                     <div class="quarter">
-                        <div class="quarter-marker">Tri2</div>
+                        <div class="quarter-marker">Q2</div>
                         <div class="quarter-content">
                             <div class="category">
                                 <div class="category-title">💻 Code</div>
@@ -174,7 +173,7 @@
 
                     <!-- Q3 -->
                     <div class="quarter">
-                        <div class="quarter-marker">Tri3</div>
+                        <div class="quarter-marker">Q3</div>
                         <div class="quarter-content">
                             <div class="category">
                                 <div class="category-title">💻 Code</div>
@@ -199,7 +198,7 @@
 
                     <!-- Q4 -->
                     <div class="quarter">
-                        <div class="quarter-marker">Tri4</div>
+                        <div class="quarter-marker">Q4</div>
                         <div class="quarter-content">
                             <div class="category">
                                 <div class="category-title">💻 Code</div>
@@ -230,5 +229,28 @@
     <footer class="site-footer">
         <p>© 2026 Niveau Zéro - Partir de zéro, grandir ensemble</p>
     </footer>
+
+    <!-- JavaScript pour le menu hamburger -->
+    <script>
+        // Récupère les éléments
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        // Ajoute un écouteur d'événement sur le clic
+        hamburger.addEventListener('click', () => {
+            // Toggle (bascule) la classe 'active'
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Ferme le menu quand on clique sur un lien
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
